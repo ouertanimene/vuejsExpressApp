@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Register from '@/components/Register'
+import HelloWorld from '../components/HelloWorld'
+import Register from '../components/Register'
+import Login from '../components/Login'
+import Medicaments from '../components/Medicaments'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -12,9 +16,18 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/register_route',
+      path: '/register',
       name: 'Register',
       component: Register
+    }, {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/medicaments',
+      name: 'Medicaments',
+      component: Medicaments
     }
   ]
 })
