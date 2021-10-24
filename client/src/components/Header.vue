@@ -5,6 +5,16 @@
         Node Vus js Express App
       </span></v-toolbar-title
     >
+        <v-toolbar-items>
+      <v-btn 
+         
+        dark
+        :to="{
+          name: 'Medicaments'
+        }">
+        Medicaments
+      </v-btn>
+    </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <!-- <router-link to="/register">

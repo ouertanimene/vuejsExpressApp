@@ -1,5 +1,6 @@
 
 const AuthentificationController = require('../controllers/AuthentificationController')
+const MedicamentController = require('../controllers/MedicamentController')
 const AuthentificationControllerPolicy = require('../policies/AuthentificationControllerPolicy')
 
 
@@ -19,4 +20,8 @@ module.exports = (app) => {
         })
     })
 
+    app.get('/medicaments',MedicamentController.getAll)
+
+    app.post('/addMed',MedicamentController.createMed)
+    
 }

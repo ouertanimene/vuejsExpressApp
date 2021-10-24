@@ -15,23 +15,23 @@ export default new Vuex.Store({
             state.token = token
             if (token) {
                 state.isUserLoggedIn = true
-              } else {
+            } else {
                 state.isUserLoggedIn = false
-              }
-         //   state.isUserLoggedIn = !!(token)
+            }
+            //   state.isUserLoggedIn = !!(token)
         },
-        setUser (state, user) {
+        setUser(state, user) {
             state.user = user
-          }
-        
+        }
+
 
     },
     actions: {
         setToken({ commit }, token) {
             commit('setToken', token)
         },
-        setUser ({commit}, user) {
+        setUser({ commit }, user) {
             commit('setUser', user)
-          }
+        }
     }
 })

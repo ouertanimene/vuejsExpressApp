@@ -1,10 +1,7 @@
 <template>
   <v-layout column>
     <v-flex xs6>
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="cyan" dark>
-          <v-toolbar-title>Register</v-toolbar-title>
-        </v-toolbar>
+      <Panel title="Register">
         <div class="pl-4 pr-4 pt-2 pb-2">
           <form name="tab-tracker-form" autocomplete="off">
             <v-text-field label="Email" v-model="email"></v-text-field>
@@ -20,12 +17,13 @@
           <br />
           <v-btn class="cyan" @click="register"> Register </v-btn>
         </div>
-      </div>
+      </Panel>
     </v-flex>
   </v-layout>
 </template>
 <script>
 import AuthentificationService from "../services/AuthentificationService";
+import Panel from './Panel.vue'
 
 export default {
   data() {
@@ -53,6 +51,9 @@ export default {
         console.log("hi");
       }
     },
+  },
+    components: {
+    Panel
   },
 };
 </script>
