@@ -23,5 +23,7 @@ module.exports = (app) => {
     app.get('/medicaments',MedicamentController.getAll)
 
     app.post('/addMed',MedicamentController.createMed)
+
+    app.get('/viewMed/:medicamentId',MedicamentController.getMedicament)
     
 }

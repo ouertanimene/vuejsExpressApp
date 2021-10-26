@@ -17,8 +17,8 @@
 
       <div
         v-for="medicament in medicaments"
-        class="song"
-        :key="medicament.title"
+        class="medicament"
+        :key="medicament.id"
       >
         <v-layout>
           <v-flex>
@@ -39,7 +39,7 @@
                   })
                 "
               >
-                View
+             <v-icon>  visibility  </v-icon><span>view sheet</span>
               </v-btn>
             </panel>
           </v-flex>
@@ -88,7 +88,7 @@ export default {
 .error {
   color: red;
 }
-.song {
+.medicament {
   padding: 20px;
 
   overflow: hidden;

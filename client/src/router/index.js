@@ -5,7 +5,7 @@ import Register from '../components/Register'
 import Login from '../components/Login'
 import Medicaments from '../components/Medicaments'
 import CreateMedicament from '../components/CreateMedicament'
-
+import ViewMedicament from '../components/ViewMedicament'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +33,11 @@ export default new Router({
       path: '/medicaments/create',
       name: 'create-medicament',
       component: CreateMedicament
+    }, 
+    {
+      path: '/medicaments/:medicamentId',
+      name: 'medicament',
+      component: ViewMedicament
     }
   ]
 })

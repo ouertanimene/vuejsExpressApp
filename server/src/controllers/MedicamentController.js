@@ -25,10 +25,24 @@ const createMed = async (req, res) => {
         })
     }
 }
+const getMedicament = async (req, res) => {
+
+    try {
+        const medicament = await Medicament.findByPk(req.params.medicamentId)
+
+        res.send(medicament)
+    } catch (err) {
+        res.status(500).send({
+            error: 'an error has occured trying to create the med'
+        })
+    }
+
+}
 
 module.exports = {
     getAll,
-    createMed
+    createMed,
+    getMedicament
 }
 
 
