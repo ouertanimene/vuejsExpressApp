@@ -1,6 +1,6 @@
 <template>
-  <v-layout column>
-    <v-flex xs6>
+ 
+    <v-flex  xs6 offset-xs3>
       <Panel title="Register">
         <div class="pl-4 pr-4 pt-2 pb-2">
           <form name="tab-tracker-form" autocomplete="off">
@@ -19,7 +19,7 @@
         </div>
       </Panel>
     </v-flex>
-  </v-layout>
+
 </template>
 <script>
 import AuthentificationService from "../services/AuthentificationService";

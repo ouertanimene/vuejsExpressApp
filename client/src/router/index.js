@@ -4,7 +4,7 @@ import HelloWorld from '../components/HelloWorld'
 import Register from '../components/Register'
 import Login from '../components/Login'
 import Medicaments from '../components/Medicaments'
-
+import CreateMedicament from '../components/CreateMedicament'
 
 Vue.use(Router)
 
@@ -28,6 +28,11 @@ export default new Router({
       path: '/medicaments',
       name: 'Medicaments',
       component: Medicaments
+    },
+    {
+      path: '/medicaments/create',
+      name: 'create-medicament',
+      component: CreateMedicament
     }
   ]
 })

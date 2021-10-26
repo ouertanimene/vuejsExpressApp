@@ -1,13 +1,20 @@
-module.exports = (sequelize, DataTypes) => {
-    const Medicament = sequelize.define('Medicament', {
+
+
+
+  module.exports = (sequelize, DataTypes) => {
+   const Medicament = sequelize.define('Medicament', {
       title: DataTypes.STRING,
-      descrption: DataTypes.TEXT,
-      price: DataTypes.STRING,
+      description: DataTypes.TEXT,
+      price: DataTypes.DECIMAL,
    
     })
-  
-    Medicament.associate = function (models) {
-    }
-  
-    return Medicament
-  }
+
+   
+    Medicament.associate = (models) => {
+        // associations can be defined here
+
+    };
+
+    return Medicament;
+
+}
